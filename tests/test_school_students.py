@@ -5,7 +5,10 @@ class TestSchoolStudents:
  
     # TODO Task1.0: write test
     def test_enroll_student(self):
-        pass
+        student = Student(name="Jyotsna", age=29, class_number=3)
+        studentList = SchoolStudents()
+        studentList.enroll_student(student)
+        assert len(studentList.enrolled_students) == 1
     
     # TODO Task1.1: write test
     def test_fetch_all_student_data(self):  
