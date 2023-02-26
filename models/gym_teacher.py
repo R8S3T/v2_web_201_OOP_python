@@ -12,3 +12,5 @@ class GymTeacher(SchoolTeacher):
         self.sport = sport
 
     # function to fetch class parameter values
+    def get_sport(self):
+        return self.sport

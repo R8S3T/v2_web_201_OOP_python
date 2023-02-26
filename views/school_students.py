@@ -1,4 +1,3 @@
-
 # This class is used to store/maintain the collection of students in the school.
 class SchoolStudents:
 
@@ -10,16 +9,17 @@ class SchoolStudents:
     # func to add a student to the list of enrolled students
     def enroll_student(self, student):
         self.enrolled_students.append(student)
-    
+
     #  func to print out the details of all enrolled students
     def all_students(self):
         for each_student in self.enrolled_students:
             print("Name :" + each_student.name)
-            
+
     # TODO Task1.1:implement a func to get all students' data
     def fetch_all_student_data(self):
-        pass
+        return self.enrolled_students
 
     # TODO Task1.2:implement a function get student with name
-    def fetch_data_with_student_name(self):
-        pass
+    def fetch_data_with_student_name(self, student_name):
+        new_list = [student for student in self.enrolled_students if student.name == student_name]
+        return new_list
